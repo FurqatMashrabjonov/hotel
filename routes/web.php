@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
-    return \Illuminate\Support\Str::camel('salom_dunyo');
+    return 'Hello World';
 });
 
 
-
-
+Route::get('auth-check', function () {
+    return 'Hooray!';
+})->middleware('auth:api');
 
